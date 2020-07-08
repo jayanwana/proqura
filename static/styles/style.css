@@ -57,6 +57,7 @@
 
   }
   .heading-area {
+    display: flex;
     flex-direction: column;
     justify-content: center;
     flex: 1 1 0px;
@@ -90,6 +91,7 @@
     background-color: #8cfff1;
     padding: 8px;
     border-radius: 50px;
+    white-space: nowrap;
   }
   .action-bar {
     margin: 24px 0;
@@ -161,4 +163,8 @@
     -webkit-box-shadow: 1px 1px 5px rgba(0,0,0,0.5);
     box-shadow:         1px 1px 5px rgba(0,0,0,0.5);
     overflow: visible !important;
+}
+.modal-button {
+  display: flex;
+  justify-content: center;
 }

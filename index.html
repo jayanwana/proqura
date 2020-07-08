@@ -3,7 +3,8 @@
 
 <head>
   <meta charset="utf-8">
-  <title></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>Proqura</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="static/styles/style.css">
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -17,7 +18,7 @@
   <div class="banner">
 
     <header>
-      <div class="container fluid">
+      <div class="container-fluid">
 
         <div class="header">
           <div class="contact">
@@ -73,8 +74,8 @@
 
           </div>
         </nav>
-        <div class="main">
-          <div class=" d-flex flex-column bd-highlight mb-3 heading-area">
+        <div class="row main">
+          <div class="col-sm-6 heading-area">
             <div class="main-heading">
               <h1 style="color: #FFF8F8;">
               The simpler way to
@@ -93,7 +94,7 @@
               <img src="static/styles/leftarrow.svg" alt="brand">
             </div>
           </div>
-          <div class="display-image">
+          <div class="col-sm-6 display-image">
             <img src="static/styles/main.png" alt="brand">
 
           </div>
@@ -103,53 +104,85 @@
     </header>
   </div>
 
-    <section>
-      <div class="container fluid">
-        <div class="row section-header">
-          <h1>Have a complete purchasing solution</h1>
-        </div>
-        <div class="section-header">
-          <p>Advertise, Approve and Manage projects for your business.</p>
-        </div>
-        <div class="row">
-          <div class="col-sm-4">
-            <div class="card">
-              <div class="circle">
-                <img src="static/styles/item1.svg" alt="item1">
-              </div>
-              <h2>Vendor Agreements</h2>
-              <p>Manage vendor agreements with ease</p>
+  <section>
+    <div class="container-fluid">
+      <div class="row section-header">
+        <h1>Have a complete purchasing solution</h1>
+      </div>
+      <div class="section-header">
+        <p>Advertise, Approve and Manage projects for your business.</p>
+      </div>
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="card">
+            <div class="circle">
+              <img src="static/styles/item1.svg" alt="item1">
             </div>
+            <h2>Vendor Agreements</h2>
+            <p>Manage vendor agreements with ease</p>
           </div>
-          <div class="col-sm-4">
-            <div class="card">
-              <div class="circle">
-                <img src="static/styles/item2.svg" alt="item2">
-              </div>
-              <h2>User Management</h2>
-              <p>Onboard and fulfill user roles effectively</p>
-            </div></div>
-          <div class="col-sm-4">
-            <div class="card">
-              <div class="circle">
-                <img src="static/styles/item3.svg" alt="item3">
-              </div>
-              <h2>Checks & Balances</h2>
-              <p>Never miss a process with our workflows</p>
-            </div></div>
+        </div>
+        <div class="col-sm-4">
+          <div class="card">
+            <div class="circle">
+              <img src="static/styles/item2.svg" alt="item2">
+            </div>
+            <h2>User Management</h2>
+            <p>Onboard and fulfill user roles effectively</p>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="card">
+            <div class="circle">
+              <img src="static/styles/item3.svg" alt="item3">
+            </div>
+            <h2>Checks & Balances</h2>
+            <p>Never miss a process with our workflows</p>
+          </div>
         </div>
       </div>
-    </section>
-    <div class="container">
-      <div id="ex1" class="modal" style="overflow: visible; height: auto;">
-        <p>Add Employee form.</p>
-        <form class="add-employee" action="index.html" method="post">
-
-        </form>
-        <a href="#" rel="modal:close">Close</a>
-      </div>
-      <p><a href="#ex1" rel="modal:open">Open Modal</a></p>
     </div>
+  </section>
+  <div class="container">
+    <div id="addEmployee" class="modal" style="overflow: visible; height: auto;">
+      <h1>Add Employee form.</h1>
+      <form class="add-employee" action="index.html" method="post">
+        <div class="form-row">
+          <div class="col-sm-6">
+            <label for="validationDefault01">Full name</label>
+            <input type="text" name="fullName" class="form-control" id="validationDefault01" placeholder="Enter Full Name" value="" required>
+          </div>
+          <div class="col-sm-6">
+            <label for="validationDefault02">Email</label>
+            <input type="email" class="form-control" id="validationDefault02" placeholder="Enter Email" value="" required>
+          </div>
+
+        </div>
+        <div class="form-row">
+          <div class="col-sm-6">
+            <label for="validationDefault03">Department</label>
+            <select class="form-control" id="validationDefault03" required>
+              <option value="logistics">Logistics</option>
+              <option value="Accounts">Accounts</option>
+              <option value="HR">HR</option>
+              <option value="Management">Management</option>
+            </select>
+          </div>
+          <div class="col-sm-6">
+            <label for="validationDefault04">Location</label>
+            <input type="text" class="form-control" id="validationDefault04" placeholder="Loaction" required>
+          </div>
+
+        </div>
+
+        <button class="btn btn-primary btn-sm" type="submit">Submit form</button>
+      </form>
+
+    </div>
+    <div class="modal-button">
+      <p><a class="btn btn-primary" href="#addEmployee" rel="modal:open">Add Employee</a></p>
+    </div>
+  </div>
 
 </body>
 
