@@ -119,6 +119,7 @@
   }
 
   .section-header {
+    margin: 16px 0;
     justify-content: center;
     text-align: center;
   }
@@ -135,6 +136,7 @@
     align-items: center;
     border: none;
     justify-content: space-around;
+    background-color: rgba(0,0,0,0)
   }
   .card > h2 {
     margin: 16px 0;
@@ -167,4 +169,18 @@
 .modal-button {
   display: flex;
   justify-content: center;
+}
+.section2 {
+  margin: 48px 0;
+  background-color: #FBFAF9;
+  padding: 16px 0;
+}
+@media (min-width: 768px) {
+  .section2 {
+    margin: 48px -40px;
+  }
+}
+.section2-card {
+  justify-content: center;
+  text-align: center;
 }
